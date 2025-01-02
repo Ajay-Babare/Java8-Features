@@ -11,7 +11,7 @@ public interface Test {
 		System.out.println("Test Interface default Method - display()");
 	}
 	
-	// Utility methods or null checks(can remove utility classes like Collections)
+	// Utility methods or null checks(can remove utility classes e.g. like Collections)
 	// can not override in implementation classes
 	// It provides the security by not allowing implementation classes to override them
 	static void sample() {
