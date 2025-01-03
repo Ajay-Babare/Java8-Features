@@ -27,6 +27,7 @@ public class CollectExample {
 		
 		System.out.println("Natural sorting by Comparable");
 		empList.stream().sorted().forEach(e->System.out.println(e));
+		
 		System.out.println("Natural sorting reverse order");
 		empList.stream().sorted(Collections.reverseOrder()).forEach(e->System.out.println(e));
 		
