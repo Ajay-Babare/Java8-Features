@@ -10,6 +10,8 @@ public class StreamCreation {
 
 	public static void main(String[] args) {
 		
+		// Stream is used to perform the operation on the collection object
+		
 		// 1. Creating a stream from individual values
 		Stream<String> stream1 = Stream.of("c","java","python");
 		

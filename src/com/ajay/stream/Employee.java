@@ -1,6 +1,6 @@
 package com.ajay.stream;
 
-public class Employee {
+public class Employee implements Comparable<Employee> {
 	
 	private Integer id;
 	private String name;
@@ -35,6 +35,11 @@ public class Employee {
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + "]";
+	}
+
+	@Override
+	public int compareTo(Employee o) {
+		return this.id.compareTo(o.id);
 	}
 	
 	
