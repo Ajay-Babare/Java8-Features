@@ -25,6 +25,20 @@ public class StreamCreation {
 		empList.add(new Employee(2,"Shyam",200000));
 		Stream<Employee> stream3 = empList.stream();
 		
+		
+//		Intermediate operations
+//		map()
+//		filter()
+//		sorted()
+//		max()
+//		min()
+//		distinct()
+		
+//		Terminal operations
+//		forEach()
+//		collect()
+//		count()
+//		get()
 	}
 
 }

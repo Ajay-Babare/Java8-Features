@@ -42,5 +42,18 @@ public class Employee implements Comparable<Employee> {
 		return this.id.compareTo(o.id);
 	}
 	
+	@Override
+	public int hashCode() {
+		return id;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		Employee e = (Employee)obj;
+		if(this.id==e.id)
+			return true;
+		else 
+			return false;
+	}
 	
 }
