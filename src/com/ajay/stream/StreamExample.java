@@ -75,6 +75,26 @@ public class StreamExample {
 		System.out.println("Max : "+summaryStatistics.getMax());
 		System.out.println("Min : "+summaryStatistics.getMin());
 		
+		
+		//flatMap(Function) 
+		List<String> l1 = new ArrayList<>();
+		l1.add("Sachin");
+		l1.add("Rohit");
+		l1.add("Virat");
+		
+		List<String> l2 = new ArrayList<>();
+		l2.add("Suryakumar");
+		l2.add("Hardik");
+		
+		List<List<String>> l3 = new ArrayList<>();
+		l3.add(l1);
+		l3.add(l2);
+		
+		// i/p -> List<List<String>>
+		// o/p -> List<String>
+		List<String> newList = l3.stream().flatMap(e->e.stream()).collect(Collectors.toList());
+		System.out.println(newList);
+		
 	}
 
 }
