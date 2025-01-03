@@ -2,6 +2,7 @@ package com.ajay.stream;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.DoubleSummaryStatistics;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -65,6 +66,15 @@ public class StreamExample {
 		
 		//groupingBy(Function,Collector)
 		System.out.println(empList.stream().collect(Collectors.groupingBy(e->e.getName(), Collectors.counting())));
+		
+		// using SummaryStatistics we can get sum, average, count, min & max etc...
+		DoubleSummaryStatistics summaryStatistics = empList.stream().collect(Collectors.summarizingDouble(p->p.getSalary()));
+		System.out.println("Sum : "+summaryStatistics.getSum());
+		System.out.println("Average : "+summaryStatistics.getAverage());
+		System.out.println("Count : "+summaryStatistics.getCount());
+		System.out.println("Max : "+summaryStatistics.getMax());
+		System.out.println("Min : "+summaryStatistics.getMin());
+		
 	}
 
 }
