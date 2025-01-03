@@ -95,6 +95,10 @@ public class StreamExample {
 		List<String> newList = l3.stream().flatMap(e->e.stream()).collect(Collectors.toList());
 		System.out.println(newList);
 		
+		// skip() and limit()
+		// 2nd Largest salary
+		empList.stream().sorted((e1,e2)->e1.getSalary()<e2.getSalary()?1:e1.getSalary()==e2.getSalary()?0:-1).limit(2).skip(1).forEach(e->System.out.println(e.getName()+" : "+e.getSalary()));
+		
 	}
 
 }
